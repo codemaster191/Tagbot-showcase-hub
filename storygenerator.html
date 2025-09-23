@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #e6ffe6);
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      margin: 8px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #story {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #444;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌈 Create Your Magical Story</h1>
+  <input type="text" id="name" placeholder="Enter your name"><br>
+  <input type="text" id="gender" placeholder="Enter your gender (boy or girl)"><br>
+  <input type="text" id="place" placeholder="Favourite place"><br>
+  <input type="text" id="passion" placeholder="Your passion"><br>
+  <input type="text" id="pet" placeholder="Pet's name"><br>
+  <button onclick="generateStory()">Generate Story</button>
+
+  <div id="story"></div>
+
+  <script>
+    function generateStory() {
+      const name = document.getElementById("name").value;
+      const gender = document.getElementById("gender").value;
+      const place = document.getElementById("place").value;
+      const passion = document.getElementById("passion").value;
+      const pet = document.getElementById("pet").value;
+
+      const story = `Once upon a time there lived a ${gender} named ${name}. That ${gender} wanted to go to ${place}, but the ${gender} did not have money. ` +
+        `But the ${gender} was really passionate about ${passion}. One day he found that there was a ${passion} competition, so he participated in it ` +
+        `and won a lot of money as the ${gender} prize. Then the ${gender} went to ${place} with the ${gender} pet ${pet} and lived happily ever after.`;
+
+      document.getElementById("story").innerText = story;
+    }
+  </script>
+</body>
+</html>
