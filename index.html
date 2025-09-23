@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Anji's Coding Hub</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 50px 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 20px auto;
+      padding: 20px;
+      width: 300px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="background-color: #222; color: white; text-align: center; font-family: sans-serif;">
-  <h1>Welcome to Anji's Coding Universe 🚀</h1>
-  <p>Click below to explore my projects:</p>
+<body>
+  <header>
+    <h1>Welcome to Anji's Coding Universe 🚀</h1>
+    <p>Explore my creative web projects below!</p>
+  </header>
 
-  <a href="story-generator.html" style="color: #00ffff; font-size: 20px;">🌟 Story Generator</a>
+  <div class="project-card">
+    <h2>🌟 Story Generator</h2>
+    <p>Create your own adventure with code!</p>
+    <a href="story-generator.html" target="_blank">Try it now</a>
+  </div>
 
-  <p style="margin-top: 50px;">Made with 💻 by Anjaneya</p>
+  <!-- Add more project cards here as you build them -->
+
+  <footer>
+    <p>Made with 💻 by Anjaneya</p>
+  </footer>
 </body>
 </html>
