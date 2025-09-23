@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prime Number Checker</title>
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #00ffcc;
+      font-family: monospace;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .code-box {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Prime Number Checker</h1>
+  <p>This Python code checks if a number is prime:</p>
+
+  <div class="code-box">
+    <pre>
+x = int(input("Enter a number: "))
+if x &lt; 2:
+    print("Not a prime number")
+else:
+    for i in range(2, x):
+        if x % i == 0:
+            print("Not a prime number")
+            break
+    else:
+        print("Number is prime")
+    </pre>
+  </div>
+
+  <p style="margin-top: 40px;">Made with 💻 by Anjaneya</p>
+</body>
+</html>
