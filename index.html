@@ -1,55 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Story Generator</title>
+  <meta charset="UTF-8">
+  <title>Anji's Coding Hub</title>
   <style>
     body {
-      font-family: Arial;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
       text-align: center;
-      padding: 50px;
-      background-color: #f0f0f0;
     }
-    input, button {
-      padding: 10px;
-      margin: 10px;
+
+    header {
+      padding: 50px 20px;
     }
-    #story {
-      font-size: 18px;
-      margin-top: 20px;
-      transition: transform 0.5s ease, color 0.5s ease;
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 20px auto;
+      padding: 20px;
+      width: 300px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
     }
-    #story.animate {
-      transform: scale(1.1);
-      color: #0077cc;
+
+    .project-card:hover {
+      transform: scale(1.05);
     }
+
     a {
-      display: block;
-      margin-top: 30px;
-      color: #0077cc;
+      color: #00ffff;
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h2>Story Generator</h2>
-  <input type="text" id="nameInput" placeholder="Enter a character name">
-  <button onclick="generateStory()">Generate Story</button>
-  <p id="story"></p>
-  <a href="index.html">⬅ Back to homepage</a>
+  <header>
+    <h1>Welcome to Anjaneya's Coding Universe 🚀</h1>
+    <p>Explore my creative web projects below!</p>
+  </header>
 
-  <audio id="sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f3e1c2b3e.mp3?filename=pop-94319.mp3"></audio>
+  <div class="project-card">
+    <h2>🌟 Story Generator</h2>
+    <p>Create your own adventure with code!</p>
+    <a href="storygenerator.html" target="_blank">Try it now</a>
+  </div>
 
-  <script>
-    function generateStory() {
-      const name = document.getElementById("nameInput").value || "Alex";
-      const story = `${name} woke up in a world made entirely of code. With a keyboard as their sword and logic as their shield, they set off on a quest to debug the universe.`;
-      const storyBox = document.getElementById("story");
-      storyBox.textContent = story;
-      storyBox.classList.add("animate");
-      setTimeout(() => storyBox.classList.remove("animate"), 500);
-      document.getElementById("sound").play();
-    }
-  </script>
+  <div class="project-card">
+    <h2>🔍 Prime Number Checker</h2>
+    <p>Check if a number is prime using Python!</p>
+    <a href="prime-checker.html" target="_blank">Try it now</a>
+  </div>
+
+  <div class="project-card">
+    <h2>🔁 Reverse String Demo</h2>
+    <p>Try this Python trick to flip any string!</p>
+    <a href="reverse-string.html" target="_blank">Try it now</a>
+  </div>
+
+  <!-- Add more project cards here as you build them -->
+
+  <footer>
+    <p>Made with 💻 by Anjaneya</p>
+  </footer>
 </body>
 </html>
 <!DOCTYPE html>
@@ -57,25 +79,9 @@
 <head>
   <title>Prime Number Checker</title>
   <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding: 50px;
-      background-color: #f0f0f0;
-    }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-    }
-    #result {
-      font-size: 20px;
-      margin-top: 20px;
-      transition: transform 0.5s ease;
-    }
-    #result.animate {
-      transform: scale(1.2);
-      color: green;
-    }
+    body { font-family: Arial; text-align: center; padding: 50px; background-color: #f0f0f0; }
+    input, button { padding: 10px; margin: 10px; }
+    a { display: block; margin-top: 30px; color: #0077cc; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -84,8 +90,6 @@
   <button onclick="checkPrime()">Check</button>
   <p id="result"></p>
   <a href="index.html">⬅ Back to homepage</a>
-
-  <audio id="sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f3e1c2b3e.mp3?filename=pop-94319.mp3"></audio>
 
   <script>
     function checkPrime() {
@@ -97,11 +101,7 @@
           break;
         }
       }
-      const result = document.getElementById("result");
-      result.textContent = isPrime ? `${num} is a prime number.` : `${num} is not a prime number.`;
-      result.classList.add("animate");
-      setTimeout(() => result.classList.remove("animate"), 500);
-      document.getElementById("sound").play();
+      document.getElementById("result").textContent = isPrime ? `${num} is a prime number.` : `${num} is not a prime number.`;
     }
   </script>
 </body>
@@ -111,25 +111,9 @@
 <head>
   <title>Reverse String</title>
   <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      padding: 50px;
-      background-color: #f0f0f0;
-    }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-    }
-    #result {
-      font-size: 20px;
-      margin-top: 20px;
-      transition: transform 0.5s ease;
-    }
-    #result.animate {
-      transform: scale(1.2);
-      color: #0077cc;
-    }
+    body { font-family: Arial; text-align: center; padding: 50px; background-color: #f0f0f0; }
+    input, button { padding: 10px; margin: 10px; }
+    a { display: block; margin-top: 30px; color: #0077cc; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -139,17 +123,11 @@
   <p id="result"></p>
   <a href="index.html">⬅ Back to homepage</a>
 
-  <audio id="sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f3e1c2b3e.mp3?filename=pop-94319.mp3"></audio>
-
   <script>
     function reverseString() {
       const str = document.getElementById("stringInput").value;
       const reversed = str.split("").reverse().join("");
-      const result = document.getElementById("result");
-      result.textContent = `Reversed: ${reversed}`;
-      result.classList.add("animate");
-      setTimeout(() => result.classList.remove("animate"), 500);
-      document.getElementById("sound").play();
+      document.getElementById("result").textContent = `Reversed: ${reversed}`;
     }
   </script>
 </body>
