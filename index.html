@@ -72,6 +72,61 @@
   <p>Check if a number is prime using Python!</p>
   <a href="primenumber.html" target="_blank">Try it now</a>
 </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Number Checker</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Prime Number Checker</h2>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="checkPrime()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkPrime() {
+      const num = parseInt(document.getElementById("numberInput").value);
+      let isPrime = num > 1;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      document.getElementById("result").textContent = isPrime ? `${num} is a prime number.` : `${num} is not a prime number.`;
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse String</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Reverse String</h2>
+  <input type="text" id="stringInput" placeholder="Enter a string">
+  <button onclick="reverseString()">Reverse</button>
+  <p id="result"></p>
+
+  <script>
+    function reverseString() {
+      const str = document.getElementById("stringInput").value;
+      const reversed = str.split("").reverse().join("");
+      document.getElementById("result").textContent = `Reversed: ${reversed}`;
+    }
+  </script>
+</body>
+</html>
+
 
 
 
